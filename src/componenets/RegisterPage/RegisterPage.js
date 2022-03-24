@@ -3,7 +3,6 @@ import 'antd/dist/antd.css';
 import { Form, Input, LoginForm, Button, Checkbox, Typography } from 'antd';
 import styled from 'styled-components';
 import palette from '../../../../src/lib/styles/palette';
-//깃
 /*
 const AuthFormBlock = styled.div`
   h3 {
