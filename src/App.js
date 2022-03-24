@@ -5,6 +5,14 @@ import NavBar from './componenets/MainPage/NavBar';
 import CommonArea from './componenets/CommonArea/SearchBar';
 import MainSearch from './componenets/MainPage/MainSearch';
 import PerfumeResult from './componenets/PerfumeResultPage/PerfumeResult';
+import {Route, Routes, Router} from 'react-router-dom';
+
+import NewLoginPage from './componenets/LoginPage/NewLoginPage';
+import NewRegisterPage from './componenets/RegisterPage/NewRegisterPage';
+import WritePage from './componenets/WritePage/WritePage';
+import LookupPage from './componenets/LookupPage/LookupPage';
+import { createTheme } from '@material-ui/core/styles'
+
 // import Slide from './componenets/MainPage/Slide';
 // import MyInfo from './componenets/MainPage/MyInfo';
 // import NewPosts from './componenets/MainPage/NewPosts';
@@ -56,21 +64,12 @@ const usestyles=makeStyles({
 function App(){
   const classes=usestyles();
   return (
-    <div className='App'>
-      <ThemeProvider theme={theme}>
-        <div className={classes.cluster}>
-          <h className={classes.title}>향카이브</h>
-          <NavBar/>
-        </div>
-
-        <div className={classes.cluster}>
-          <PerfumeResult/>
-        </div>
-        <br/>
-        
-
-      </ThemeProvider>
-    </div>
+      <Routes>
+      <Route path="/login" element={<NewLoginPage/>}/>
+      <Route path="/register" element={<NewRegisterPage/>}/>
+      <Route path="/write" element={<WritePage/>}/>
+      <Route path="/lookup" element={<LookupPage/>}/>
+    </Routes>
   )
 }
 export default App;
