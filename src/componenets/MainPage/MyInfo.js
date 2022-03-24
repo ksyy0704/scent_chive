@@ -63,7 +63,7 @@ function MyInfo() {
                             눈송이
                         </a>
                         <a className={classes.postsComments}>
-                            작성글 : 50개 <br/>
+                            작성글 : 52개 <br/>
                             작성댓글 : 893개
                         </a>
                     </div>

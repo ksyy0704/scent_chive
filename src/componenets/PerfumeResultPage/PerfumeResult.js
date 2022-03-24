@@ -9,7 +9,6 @@ import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import { Grid } from '@mui/material';
 import Chart from '../CommonArea/Chart';
 import StarRating from '../CommonArea/StarRating';
-//커밋 테스트2
 
 
 const usestyles=makeStyles({
