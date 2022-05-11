@@ -14,13 +14,13 @@ import Paper from "@material-ui/core/Paper";
 
 
 function createData(perfumePic, perfumeName, orderDate, priceAndQuantity, orderStatus, sellerInfo) {
-    //향수 사진, 향수 이름, 주문일자, 가격&수량, 주문상태, 판매자 정보
+    //향수 사진, 향수 이름, 주문일자, 가격&수량, 주문상태, 판매자 정보(사진은 나중에 주소 받아올 예정)
  return { perfumePic, perfumeName, orderDate, priceAndQuantity, orderStatus, sellerInfo };
 }
-  
+
 const rows = [
- createData(<img width="60px" height="60px" style={{marginRight: 20+ 'px'}} src={process.env.PUBLIC_URL + '/img/Le Beau Le parfum.jpg'}></img>, "Le Beau Le parfum", "2022.02.03.", "44,000원(1개)", "구매완료", "kjh0124" ),
- createData(<img width="60px" height="60px" style={{marginRight: 20 + 'px'}} src={process.env.PUBLIC_URL + '/img/Beautiful Magnolia Intense.jpg'}></img>, "Beautiful Magnolia Intense", "2022.02.03.", "84,000원(1개)", "예약중", "abc123" ),
+ createData(<img width="50px" height="50px" style={{marginRight: 20+ 'px'}} src={process.env.PUBLIC_URL + '/img/Le Beau Le parfum.jpg'}></img>, "Le Beau Le parfum", "2022.02.03.", "44,000원(1개)", "구매완료", "kjh0124" ),
+ createData(<img width="50px" height="50px" style={{marginRight: 20 + 'px'}} src={process.env.PUBLIC_URL + '/img/Beautiful Magnolia Intense.jpg'}></img>, "Beautiful Magnolia Intense", "2022.02.03.", "84,000원(1개)", "예약중", "abc123" ),
 ];
 
 
