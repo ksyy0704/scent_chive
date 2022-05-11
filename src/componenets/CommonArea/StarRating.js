@@ -16,6 +16,7 @@ export default function StarRating() {
         <Rating
           name="Rating Label"
           value={ratingValue}
+          size="large"
           onChange={(event, newValue) => {
             setRatingValue(newValue);
           }}

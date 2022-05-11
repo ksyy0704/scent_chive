@@ -5,12 +5,6 @@ import {makeStyles} from '@material-ui/core/styles'
 import Accordion from "./Accordion";
 import { useSpring, animated } from "react-spring";
 
-// const styles=makeStyles({
-//   bar:{
-//   }
-// })
-
-
 class SearchByNote extends React.Component{
     constructor(props) {
       super();

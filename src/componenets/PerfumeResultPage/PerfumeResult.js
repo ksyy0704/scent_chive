@@ -9,6 +9,8 @@ import StarOutlineIcon from '@mui/icons-material/StarOutline';
 import { Grid } from '@mui/material';
 import Chart from '../CommonArea/Chart';
 import StarRating from '../CommonArea/StarRating';
+import StarIcon from '@mui/icons-material/Star';
+import green from "@material-ui/core/colors/green";
 
 
 const usestyles=makeStyles({
@@ -103,13 +105,14 @@ const usestyles=makeStyles({
         width: "80%",
         rowGap: "10px",
         margin:"auto",
+        marginTop:"10px",
     },
     writeReview:{
         display:'flex',
     },
     profilePictureBox:{
-        width:"5%",
-        height:"5%",
+        width:"10%",
+        height:"10%",
         borderRadius:"70%",
         overflow:"hidden",
     },
@@ -121,14 +124,38 @@ const usestyles=makeStyles({
     userName:{
         fontSize:"20px",
         float:"left",
+        display:"flex",
+    },
+    newCommentArea:{
+        display:"flex",
+        flexDirection:"column",
+        marginLeft:"10px",
+    },
+    othersComments:{
+        display:"flex",
+        marginTop:"10px",
+        marginBottom:"10px",
+        
+    },
+    commentInfoArea:{
+        display:"flex",
+        flexDirection:"row",
+        width:"85%",
+    },
+    othersCommentsArea:{
+        display:"flex",
+        flexDirection:"column",
+        width:"85%",
+        marginLeft:"10px",
+    },
+    commentWords:{
+        textAlign:"justify",
+        marginTop : "10px",
+
     },
     
     
-
-
-    
 })
-
 
     
 function PerfumeResult(){
@@ -171,7 +198,9 @@ function PerfumeResult(){
                     </div>
                 </Grid>
                 <Grid item xs={6} >
-                    4
+                    <div>다른 사람들의 평점</div>
+                    <StarIcon style={{color:"green"}} sx={{fontSize:250}}/>
+
                 </Grid>
                 <Grid item xs={12}>
                     <StarRating/>
@@ -187,13 +216,65 @@ function PerfumeResult(){
                     <div className={classes.profilePictureBox}>
                         <img src={profilePic} className={classes.profilePicture} alt="프로필사진"/>
                     </div>
-                    <div className={classes.namePostsComments}>
+                    <div className={classes.newCommentArea}>
+                        <div className={classes.userName}>눈송이</div>
+                        <div>
+                            <textarea rows={5} cols={95}/>
+                            <button>확인</button>
+                        </div>
                     </div>
-
-
-                    <div className={classes.userName}>눈송이</div>
-                    <textarea rows={5} cols={80}/>
-                    <button>확인</button>
+                </div>
+                <div className={classes.othersComments}>
+                    <div className={classes.profilePictureBox}>
+                        <img src={profilePic} className={classes.profilePicture} alt="프로필사진"/>
+                    </div>
+                    <div className={classes.othersCommentsArea}>
+                        <div className={classes.commentInfoArea}>
+                            <div className={classes.userName}>눈송대마왕</div>
+                            <div className={classes.commentDate}>2021년 12월 01일(수정됨)</div>
+                            <button>신고</button>
+                        </div>
+                        <div className={classes.commentWords}>
+                            엄청 달콤합니다. 야쿠르트 향이 나는데 겨울에 쓰기 딱 좋습니다.
+                        </div>
+                    </div>
+                </div>
+                <div className={classes.othersComments}>
+                    <div className={classes.profilePictureBox}>
+                        <img src={profilePic} className={classes.profilePicture} alt="프로필사진"/>
+                    </div>
+                    <div className={classes.othersCommentsArea}>
+                        <div className={classes.commentInfoArea}>
+                            <div className={classes.userName}>불꽃대마왕</div>
+                            <div className={classes.commentDate}>2022년 01월 08일</div>
+                            <button>신고</button>
+                        </div>
+                        <div className={classes.commentWords}>
+                            명성이 자자해서 구매해 봤는데 개인적으로는 별로에요 요구르트향보다 치과 냄새가 더 강해요
+                            이거 뿌리면 이 썩는 듯한 기분이 들어요
+                            겨울에 히터 있는 곳에서 뿌리면 속 안 좋아질 것 같아요 꼭 시향해보고 신중하게 구매하세요.
+                            참고로 저는 비누향, 허브향 좋아합니다.
+                        </div>
+                    </div>
+                </div>
+                <div className={classes.othersComments}>
+                    <div className={classes.profilePictureBox}>
+                        <img src={profilePic} className={classes.profilePicture} alt="프로필사진"/>
+                    </div>
+                    <div className={classes.othersCommentsArea}>
+                        <div className={classes.commentInfoArea}>
+                            <div className={classes.userName}>제비꽃돼지</div>
+                            <div className={classes.commentDate}>2022년 02월 05일(수정됨)</div>
+                            <button>신고</button>
+                        </div>
+                        <div className={classes.commentWords}>
+                            위시리스트에 2년이나 있었던 향수에요.
+                            이번 설날에 받은 세뱃돈 탈탈 털어서 드디어 구매했습니다. 행복해요!!
+                            바틀도 예쁘고 향도 달달하니 최곱니다.
+                            35ml로 살까 고민하다가 그냥 70ml로 샀는데 역시 향수는 대용량이 최고에요 *_*
+                            강추합니다!
+                        </div>
+                    </div>
                 </div>
 
             </div>
