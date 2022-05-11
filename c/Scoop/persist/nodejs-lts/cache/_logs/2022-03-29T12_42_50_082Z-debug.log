@@ -1,0 +1,22 @@
+0 info it worked if it ends with ok
+1 verbose cli [
+1 verbose cli   'C:\\Windows\\System32\\c\\Scoop\\apps\\nodejs-lts\\current\\node.exe',
+1 verbose cli   'C:\\Windows\\System32\\c\\Scoop\\apps\\nodejs-lts\\current\\node_modules\\npm\\bin\\npm-cli.js',
+1 verbose cli   'start'
+1 verbose cli ]
+2 info using npm@6.14.15
+3 info using node@v14.17.6
+4 verbose config Skipping project config: C:\Users\good/.npmrc. (matches userconfig)
+5 verbose stack Error: ENOENT: no such file or directory, open 'C:\Users\good\package.json'
+6 verbose cwd C:\Users\good\dev\hyang-chive
+7 verbose Windows_NT 10.0.19043
+8 verbose argv "C:\\Windows\\System32\\c\\Scoop\\apps\\nodejs-lts\\current\\node.exe" "C:\\Windows\\System32\\c\\Scoop\\apps\\nodejs-lts\\current\\node_modules\\npm\\bin\\npm-cli.js" "start"
+9 verbose node v14.17.6
+10 verbose npm  v6.14.15
+11 error code ENOENT
+12 error syscall open
+13 error path C:\Users\good\package.json
+14 error errno -4058
+15 error enoent ENOENT: no such file or directory, open 'C:\Users\good\package.json'
+16 error enoent This is related to npm not being able to find a file.
+17 verbose exit [ -4058, true ]
